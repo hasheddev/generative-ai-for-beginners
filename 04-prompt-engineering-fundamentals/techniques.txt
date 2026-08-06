@@ -1,0 +1,8 @@
+** Write clear instructions
+- basic prompts(completon)
+- iterate(conversation)
+- instruct(task)
+- refine(lenght, format)
+- primary content(context)
+- provide cues(guide me)
+- provide example(show me)
