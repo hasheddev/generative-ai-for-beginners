@@ -6,7 +6,7 @@ import json
 import base64
 
 # import dotenv
-dotenv.load_dotenv()
+dotenv.load_dotenv(override=True)
 
  
 

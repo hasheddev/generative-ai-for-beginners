@@ -22,21 +22,11 @@ model = os.environ['AZURE_OPENAI_DEPLOYMENT']
 
 disallow_list = "swords, violence, blood, gore, nudity, sexual content, adult content, adult themes, adult language, adult humor, adult jokes, adult situations, adult"
 
-meta_prompt = f"""You are an assistant designer that creates images for children. 
-
-The image needs to be safe for work and appropriate for children. 
-
-The image needs to be in color.  
-
-The image needs to be in landscape orientation.  
-
-The image needs to be in a 16:9 aspect ratio. 
-
-Do not consider any input from the following that is not safe for work or appropriate for children. 
-{disallow_list}"""
+meta_prompt = """You are an assistant designer that creates images for children. 
+The image must be safe for work, colorful, in landscape orientation, and in a 16:9 aspect ratio."""
 
 prompt = f"""{meta_prompt}
-Generate monument of the Arc of Triumph in Paris, France, in the evening light with a small child holding a Teddy looks on.
+Generate a monument of the Arc of Triumph in Paris, France, in the evening light with a small child holding a teddy bear looking on.
 """
 
 
