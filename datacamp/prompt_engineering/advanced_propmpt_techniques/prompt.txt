@@ -1,0 +1,34 @@
+Use specific action verbs like, propose, compete, explain and not vague ones like think, feel, try, know
+
+Write specific, descriptive and detailed instructions regarding context, output, audience and style
+
+Specify output structure
+
+
+Start with instructions, use delimiters to specify input practices
+menton delimiters used
+
+
+The text generated is raw Markdown, not direct HTML for gemini output.
+
+Few shot prompting - no of examples determined by task complexity, 1 shot for output structure control,more for more complex tasks like
+sentiment analysis
+
+Shots are example quesions and answers
+
+Steps are instructions models follow
+
+We can use few-shot prompts to obtain chain-of-thought reasoning. Instead of instructing the model to generate reasoning steps
+we provide examples of what the answers should include.
+
+Chain of thought asks llm to generate thoughts or steps as it solves problem to get insight into its
+decsion making e.g let's think it through one thought with flawed resoning gives wrong output this is where
+consistency promps comes include
+
+Self consistency prompt uses multiple chains of thought determining result with majority vote
+
+prompt engineering doesn't always succeed on the first try. It is an iterative process where we build a prompt, feed it to the model,
+observe and analyze the output, and accordingly reiterate to make the prompt better.
+
+Prompt refinement applies to all prompt types. We refine examples in few-shot prompts, guiding steps in multi-step prompts, and problem
+descriptions in chain-of-thought and self-consistency prompts. 
