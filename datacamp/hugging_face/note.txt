@@ -1,0 +1,30 @@
+Hugging Face is a platform where the AI community can access, collaborate, and stay informed on the latest
+open-source models, datasets, and applications.
+
+We can find the model name and supported tasks on the model card on the Hugging Face Hub.
+
+Local vs inference provider
+local is free, convenient but slow and resource intensive for large parameter models, image and video generation that need gpus
+inference providers are fast adn some free credits are provided
+
+Dataset card also contain information about datasets and we can use sql in data studio to search
+
+datasets library allows us to downloaduse and share datasets in python code. Partitions can be found in dataset card
+
+
+Summarization can either be extractive, where key sentences from the input text are selected to form a summary.
+This method is efficient and requires fewer resources but often lacks flexibility and may result in less cohesive, easy-to-read summaries.
+On the other hand, abstractive summarization generates new text that captures the main ideas while rephrasing for clarity and readability.
+Though more flexible, it demands more computational resources and processing.
+
+Extractive summarization is ideal for tasks like Legal Document Analysis, where key clauses are highlighted, and Financial Research, where main insights
+are extracted—both requiring accuracy and ensuring no new content is fabricated.
+
+Abstractive summarization is ideal for tasks like News Article Summaries, crafting concise and readable overviews, and Content Recommendations, generating compelling
+descriptions—both focused on delivering clear, engaging, and impactful summaries.
+
+Use AutoModels and AutoTokenizers instead of simple pipelines when tasks demand more control and customization.
+For example, advanced text preprocessing and tokenization enable cleaning tailored to specific use cases. In classification tasks, custom thresholding allows setting
+weights and thresholds to prioritize categories, like assigning 'Support' more often in a customer support model. Lastly, for complex text analysis workflows involving
+multiple processing stages, they provide precise control to customize and integrate each step effectively.
+
