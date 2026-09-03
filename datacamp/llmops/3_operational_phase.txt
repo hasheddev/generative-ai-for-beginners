@@ -1,0 +1,61 @@
+Deployment
+Monitoring and observability
+Cost management
+Governance and security
+
+The key factor in deployment is the infrastructure we're planning to use. An application may include a chain/agent logic, a vector database, the LLM itself, and more.
+Each component needs to be deployed and work together.
+- Choice of hosting
+- Api design
+- How to run
+Ci/Cd
+
+Monitoring continuously watches a system behavior for performance changes. Observability reveals a system's internal state to external observers,
+using data from all components to understand their interactions. This enables us to answer unforeseen questions prompted by unexpected events,
+like a sudden surge in traffic or a database outage
+Monitoring:    "System CPU is at 99%. Alert the team."  (Tells you THAT something is wrong)
+Observability: "User X's payload triggered a memory leak inside thread Y of service Z." (Tells you WHY)
+To enable observability, we can utilize three primary data sources: logs, metrics, and traces.
+Logs provide detailed chronological event records, metrics offer quantitative system performance measurements, and traces show the flow of requests across system components.
+
+- Input monitoring
+Input monitoring involves tracking changes, errors, or malicious content in application inputs, particularly relevant in LLM applications with human-generated text input.
+Detecting malicious input by comparing user inputs with known adversarial prompts is essential, a topic we'll explore later in this chapter. Data drift is the change in
+input data distribution over time, impacting application performance. It can result from environmental changes, user behavior, or data source alterations.
+Addressing data drift requires monitoring the data distribution and periodically updating the model.
+- Functional monitoring
+Functional monitoring entails monitoring an application's overall health, performance, and stability. This encompasses tracking metrics like response time, request volume, downtime, and error rates
+Is is vital to monitor system resources such as memory, GPU usage and costs due to unpredictable executions and potential to involve multiple calls to LLMs.
+- Output monitoring
+Involves assessing the responses an application generates to ensure they match the expected content. This assessment relies on the primary and secondary metrics defined during testing,
+with unsupervised metrics like bias, toxicity, and helpfulness being particularly useful.
+Model drift is when the model gets worse because the relationship between input and output changes due to external factors. Implementing feedback loops, like refining the application using the latest data, can mitigate this issue.
+
+Alert handling
+Alerting ensures that we're promptly notified when issues arise. It's essential to anticipate and prepare for potential problems, threats, and failures by establishing clear procedures.
+Depending on the maturity of our organization and application, we may have service-level agreements in place to define response times and responsibilities in case of issues.
+
+
+Cost management
+Costs can escalate significantly based on hosting and usage. For self-hosted models, costs arise from hosting, while for externally hosted models, costs come from usage.
+Costs for cloud hosting depend on the duration the server remains operational. For on-premise hosting, expenses are based on hardware costs and expenses like maintenance and electricity.
+Externally hosted proprietary models have usage-based costs, determined by the number of calls and the number of tokens per call. 
+
+We optimize by 
+- Choosing the right model
+Use the most cost effective model that still accomplished the task, use multiple smaller task specific models and for self hosting model reduction
+techniques can be used
+- Optimize prompts:  use prompt compression using tools, content reduction by optimizing chat memory and RAG to return fewer returns
+- Optimize number of calls: use batching to send multiple prompts at once, cache response in case of frequntly asked question, optimize and limit agent calls
+use rate limiting
+
+For self-hosted models monitor the cost per machine per time unit, while for externally hosted setups, it's crucial to track the cost per session.
+A session can have multiple LLM calls, so a session is often a better abstraction as opposed to calls. Understanding how your user base will grow and how costs
+will scale alongside this growth is key.
+
+
+Governance involves policies, guidelines, and frameworks governing LLM applications' development, deployment, and usage. Security involves measures to prevent
+unauthorized access, data breaches, adversarial attacks, and potential misuse or manipulation of the models' outputs or capabilities.
+Threaths like prompt injection, output manipulation, DOS and Data integrity and poisoning should be avoided
+
+Use OWASP to stay informed about llm security risks

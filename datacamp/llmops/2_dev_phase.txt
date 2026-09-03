@@ -1,0 +1,51 @@
+Prompt engineering
+Cahins, agents architecture
+Rag Fine tuning
+Testing
+
+Prompt engineering improves performance, controls outputs and avoids bias , hallucination
+Prompt management is used for finding right prompt and is crucial for efficiency, reproducibility, and collaboration
+This involves tracking the prompt itself, its output, along with details about the model and settings used so we can revisit and
+reuse past results. Using a dedicated prompt management tool or our preferred version control system is recommended
+We develop prompt templates that ae reusable
+
+Chains and Agents
+A chain, also known as a pipeline or a flow, consists of connected steps that take inputs and produce outputs.
+steps like receiving input, searching examples, prompt creation, output retrieval, and output parsing.
+Agents are used for more flexibility
+LLM-powered agents follow a design where actions, also known as tools, are available, and the LLM decides which action to take.
+An action functions as a standalone chain that generates output. Unlike deterministic chains, agents are adaptive. They can help us in
+scenarios with many actions, where the optimal sequence of steps is unknown, especially when we're uncertain about the inputs we'll receive.
+Chains vs Agents
+Chains are deterministic, while agents adaptively choose actions.
+Chains are simpler, while agents exhibit more complex behavior due to their adaptability.
+Chains are less flexible, while agents can adjust to diverse inputs.
+Chains are less risky due to predictability, whereas agents might execute unpredictable actions, resulting in unpredictable outcomes.
+
+Rag vs Fine tuning
+RAG is a common LLM design pattern, combining the model's reasoning abilities with external factual knowledge.
+RAG consists of three steps in a chain: Retrieve related documents, augment the prompt with these documents, and generate the output.
+This allows the LLM to use external data for better results. The retrieve step is crucial, as dealing with large knowledge bases can be challenging.
+
+Unlike RAG, which incorporates factual knowledge, fine-tuning adjusts the LLM's weights using our own data. This process expands the model's reasoning
+capabilities to specific tasks and new domains, such as different languages or specialized fields.
+There are two main approaches to fine-tuning, each requiring different types of data. Supervised fine-tuning, a form of transfer learning, needs demonstration
+data containing input prompts with desired outputs. This approach retrains parts of the model using this new data. The second approach is reinforcement learning
+from human feedback, typically done after supervised fine-tuning. This requires human-labeled data, such as rankings, or quality scores obtained from likes and dislikes
+We then train an extra reward model to predict output quality, and optimize the original LLM to maximize this. Both approaches require decision-making and can be complex.
+
+RAG is used to include factual knowledge. It retains all capabilities of the original LLM without altering it. It's easy to implement and keeps the application up-to-date
+if the external database is current. However, it adds extra components to the application, requiring careful engineering. When specializing in a new domain, fine-tuning is used,
+as it offers full customizability over the model without needing additional components during deployment. Yet, it needs labeled data and specialized knowledge to implement.
+Depending on the training data used, it may worsen the application and amplify data biases. It can even cause the model to forget previously learned knowledge, known as catastrophic forgetting
+
+
+- Testing Involves Building test set using test that that closey resembles real world data
+- Choosing metric
+If the model's output has a correct answer, such as a target label or number, use machine learning metrics like accuracy to assess correctness.
+We can use text comparison metrics when there's no correct answer but we have a reference. The aim is to mimic how humans evaluate similarity and quality in text
+If there's no reference answer but we have human feedback, we can use feedback score metrics. One approach is to have humans rate the text on quality, relevance, or coherence,
+although this can be expensive. Alternatively, we can use model-based methods to predict expected ratings based on past feedback or ask LLM judges if feedback was incorporated.
+- Choosing secondary metrics
+These can relate to the text's characteristics, such as bias, toxicity and helpfulness. Alternatively, they can pertain to operational characteristics of the application, like latency, total incurred cost, and memory usage.
+This is use case dependent

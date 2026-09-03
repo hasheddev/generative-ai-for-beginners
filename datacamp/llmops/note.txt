@@ -1,0 +1,32 @@
+LLMOps involves the specialized practices, processes, and infrastructure required to effectively manage, deploy, and maintain
+large language model applications throughout their lifecycle.
+
+LLMOps provides efficient, scalable, and risk-controlled management of LLM applications, enabling organizations to maximize benefits
+while minimizing risks.
+
+MLOps involves managing the operational aspects of machine learning models, while LLMOps specializes in handling the unique challenges posed by LLMs.
+
+LLMOps vs MLOps
+LLMOps deals with large-scale models, whereas MLOps typically handles smaller models.
+LLMOps primarily focuses on text data, while MLOps focuses on any data.
+LLMOps often leverages pre-trained models, whereas MLOps typically does not.
+LLMOps involves techniques like prompt engineering and fine-tuning to enhance model performance, whereas MLOps employs feature engineering and model selection for improvement.
+LLMs are general-purpose models capable of handling a wide range of tasks and domains, while ML models typically focus on models with fixed scope tailored to specific tasks
+
+Ideation -> <-  Development <- ->   Operational
+We have the ability to shift between different phases, moving in both directions as necessary.
+During development, there might be a need for additional planning, leading us back to the ideation phase.
+Likewise, in the operational phase, we might identify the requirement for further application development, motivating a return to the development phase.
+
+The first step of the ideation phase is data sourcing, which is the process of identifying data needs, finding data sources and making them available.
+We then move on to base model selection, which is about selecting the right base LLM for our application's use-case.
+In the development phase, we start with prompt engineering, where we focus on crafting effective prompts to ensure the model produces accurate outputs.
+We should think about different architectures for shaping our application, such as chains and agents.
+Various techniques exist that boost the model's performance, such as RAG and fine-tuning.
+The last consideration in the development phase is testing, which is about determining when the application is ready for production.
+In the operational phase, our first activity centers around deploying our application to production.
+Moreover, monitoring and observability help us keep track of how well everything is working.
+Another consideration is cost management, which is about handling the expenses associated with using these models.
+Concluding the operational phase is the implementation of governance and security, which includes access controls and measures to mitigate threats.
+
+Understanding the specific phases helps us prioritize activities, allocate resources effectively, set realistic timelines, and identify potential bottlenecks. 
