@@ -1,0 +1,9 @@
+Errors that occur due to connection or server issues on either the user's or the service's side are for example InternalServerError, APIConnectionError, and APITimeoutError.
+In these cases, the best solution is to check our connection, including any firewalls that might be blocking access, then wait and retry after a few minutes, and to get in touch with support if the error persists.
+
+Errors can also occur due to limits to the size or frequency of requests, such as RateLimitError and ConflictError. Here the solution is to ensure that the requests are paced within the limits of the API, such as
+reducing the amount of text in the requests sent or staggering requests if they are frequent.
+
+An AuthenticationError occurs when our API key or token is invalid, expired, or revoked. To resolve this, we need to ensure that our API key or token is correct and active, and that its access has not been revoked. 
+
+A BadRequestError indicates that our request was malformed or missing some required parameters, such as passing an invalid role to the message dictionary

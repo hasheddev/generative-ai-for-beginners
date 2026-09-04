@@ -1,0 +1,2 @@
+The ability of the model to handle multiple functions is called parallel function calling
+Parallel function calling enables an improved communication with the model, enhancing its ability to process and generate responses.

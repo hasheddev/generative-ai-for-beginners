@@ -1,0 +1,23 @@
+The moderation endpoint uses OpenAI's models to evaluate text and assign a probability for each category of content violation.
+These categories have been selected by OpenAI and are hate, harassment, self-harm, sexually explicit content, and violent content.
+
+Use Moderation Api
+Limit input and outpur token
+User adversarial testing
+Craft prompts that safeguard system
+
+Incorporate human oversite by sampling otput and integrating feedback
+Use authentication
+Allow users to report issues
+Communicate to user that llms have limits
+
+As a way to prevent malicious actors from misusing AI systems, OpenAI suggests including unique user IDs in requests.
+This ensures that the API call can be easily identified in case of guidelines violations. It can be done by hashing
+usernames for registered users and, for non-registered users, by passing unique session IDs. 
+
+Safeguard api key
+
+Here are some best practices to ensure this: Keeping API keys server-side to avoid exposure in client-side environments
+like browsers or mobile apps. Never committing API keys to source code repositories. Instead, using environment variables to save the key,
+even in private repositories. Utilizing key management services for secure API key storage and access control.
+Regularly monitoring account usage and rotating API keys.

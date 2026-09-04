@@ -1,5 +1,5 @@
 Prompt engineering
-Cahins, agents architecture
+Chains, agents architecture
 Rag Fine tuning
 Testing
 
