@@ -1,0 +1,8 @@
+ Embedding models map text onto a multi-dimensional space, or vector space, and the numbers outputted by the model represent the location of the text in that space.
+ More similar pieces of text or words, like teacher and student, are mapped closer together in the space and dissimilar words are mapped further away.
+ This allows to capture semantic meaning i.e context and intent
+
+Uses
+ Allows for semantic search engines
+ Recommendation systems
+ Classification of sentiment, cluster observations
