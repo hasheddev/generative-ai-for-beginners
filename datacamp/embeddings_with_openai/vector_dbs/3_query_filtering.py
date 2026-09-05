@@ -31,7 +31,6 @@ reference_texts = ["children's story about a car", "lions"]
 result = collection.query(
   query_texts=reference_texts,
   n_results=2,
-  # Filter for titles with a G rating released before 2019
   where={
     "$and": [
         {"rating": 

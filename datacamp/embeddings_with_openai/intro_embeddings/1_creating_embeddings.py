@@ -1,7 +1,7 @@
 from openai import OpenAI
 import numpy as np
 from sklearn.manifold import TSNE
-import matplotlib as plt
+import matplotlib.pyplot as plt
 
 #response['date'][0]['embedding]
 # Create an OpenAI client
