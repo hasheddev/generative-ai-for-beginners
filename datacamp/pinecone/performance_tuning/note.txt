@@ -1,0 +1,1 @@
+Multitenancy is a software architecture where a system can serve multiple groups of users (more generally referred to as tenants) in isolation.

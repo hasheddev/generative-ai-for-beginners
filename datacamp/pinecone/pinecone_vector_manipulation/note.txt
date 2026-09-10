@@ -1,0 +1,11 @@
+here are two main methods for accessing vectors from a Pinecone vector database: fetching and querying. Fetching involves finding and returning a record using its ID.
+This is normally done to explore and verify particular records from the index. Querying involves sending a vector to the index, and returning the vector or vectors that are most similar to it.
+If vectors were books, fetching would be like using the ISBN, or International Standard Book Number, to find a book. Querying is like searching for books that are similar to one we already own. 
+
+Read units, or RUs, are a Pinecone-specific measure of the resources consumed during reading operations. Fetching, querying, and listing vectors all consume read units. For fetching,
+1RU is consumed for every batch of 10 records retrieved.
+
+2. Metadata filtering
+00:16 - 00:38
+Vectors often have associated metadata stored in the index. This metadata can be strings, numbers, Booleans, or true/false values, and lists of strings. This metadata can be used to filter
+the vectors that are searched through during the query, reducing the search space and query latency.

@@ -1,0 +1,2 @@
+Organizations also play a key role in managing indexes. They provide control over access and billing to different Pinecone projects. Pinecone projects can contain many indexes,
+so the Pinecone ecosystem consists of a hierarchy of organizations at the top, down to projects, indexes, namespaces, and individual records.
