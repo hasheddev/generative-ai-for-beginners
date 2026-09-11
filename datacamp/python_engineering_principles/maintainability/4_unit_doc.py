@@ -1,0 +1,1 @@
+#use codecov for test coverage and code climate to impotve readability

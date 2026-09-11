@@ -1,0 +1,14 @@
+in requirement file use
+
+setup.py is used to setup a package and requirements.txt is used to setup package environment
+
+module_name
+module==version
+module>=version
+
+run pip install . to install package environment
+
+matplotlib>=3.0.0
+numpy==1.15.4
+pandas<=0.22.0
+pycodestyle
