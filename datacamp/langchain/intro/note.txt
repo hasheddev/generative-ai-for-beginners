@@ -1,0 +1,3 @@
+Prompt templates are a fundamental LangChain component that act as reusable recipes for defining prompts for LLMs.
+Prompt templates can include instructions or questions, examples for the model to draw on, and any additional context that might help the model complete the task.
+Langchain expresson language LCEL  creates chains that connect calls to different components
